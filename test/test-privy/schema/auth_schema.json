@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome8",
+  "definitions": {
+      "Welcome8": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "data": {
+                  "$ref": "#/definitions/Data"
+              }
+          },
+          "required": [
+              "data"
+          ],
+          "title": "Welcome8"
+      },
+      "Data": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "user": {
+                  "$ref": "#/definitions/User"
+              }
+          },
+          "required": [
+              "user"
+          ],
+          "title": "Data"
+      },
+      "User": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "id": {
+                  "type": "string",
+                  "format": "uuid"
+              },
+              "phone": {
+                  "type": "string"
+              },
+              "user_status": {
+                  "type": "string"
+              },
+              "user_type": {
+                  "type": "string"
+              },
+              "sugar_id": {
+                  "type": "string"
+              },
+              "country": {
+                  "type": "string"
+              },
+              "latlong": {
+                  "type": "null"
+              },
+              "user_device": {
+                  "$ref": "#/definitions/UserDevice"
+              }
+          },
+          "required": [
+              "country",
+              "id",
+              "latlong",
+              "phone",
+              "sugar_id",
+              "user_device",
+              "user_status",
+              "user_type"
+          ],
+          "title": "User"
+      },
+      "UserDevice": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "device_token": {
+                  "type": "string",
+                  "format": "integer"
+              },
+              "device_type": {
+                  "type": "string"
+              },
+              "device_status": {
+                  "type": "string"
+              }
+          },
+          "required": [
+              "device_status",
+              "device_token",
+              "device_type"
+          ],
+          "title": "UserDevice"
+      }
+  }
+}

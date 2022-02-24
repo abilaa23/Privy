@@ -1,0 +1,154 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome9",
+    "definitions": {
+        "Welcome9": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "$ref": "#/definitions/Data"
+                }
+            },
+            "required": [
+                "data"
+            ],
+            "title": "Welcome9"
+        },
+        "Data": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "user": {
+                    "$ref": "#/definitions/User"
+                }
+            },
+            "required": [
+                "user"
+            ],
+            "title": "Data"
+        },
+        "User": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "level": {
+                    "type": "integer"
+                },
+                "age": {
+                    "type": "integer"
+                },
+                "birthday": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "gender": {
+                    "type": "string"
+                },
+                "zodiac": {
+                    "type": "string"
+                },
+                "hometown": {
+                    "type": "string"
+                },
+                "bio": {
+                    "type": "string"
+                },
+                "latlong": {
+                    "type": "null"
+                },
+                "education": {
+                    "$ref": "#/definitions/Education"
+                },
+                "career": {
+                    "$ref": "#/definitions/Career"
+                },
+                "user_pictures": {
+                    "type": "array",
+                    "items": {}
+                },
+                "user_picture": {
+                    "type": "null"
+                },
+                "cover_picture": {
+                    "$ref": "#/definitions/CoverPicture"
+                }
+            },
+            "required": [
+                "age",
+                "bio",
+                "birthday",
+                "career",
+                "cover_picture",
+                "education",
+                "gender",
+                "hometown",
+                "id",
+                "latlong",
+                "level",
+                "name",
+                "user_picture",
+                "user_pictures",
+                "zodiac"
+            ],
+            "title": "User"
+        },
+        "Career": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "company_name": {
+                    "type": "null"
+                },
+                "starting_from": {
+                    "type": "null"
+                },
+                "ending_in": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "company_name",
+                "ending_in",
+                "starting_from"
+            ],
+            "title": "Career"
+        },
+        "CoverPicture": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "url": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "url"
+            ],
+            "title": "CoverPicture"
+        },
+        "Education": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "school_name": {
+                    "type": "null"
+                },
+                "graduation_time": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "graduation_time",
+                "school_name"
+            ],
+            "title": "Education"
+        }
+    }
+}
